@@ -107,11 +107,10 @@ src/
 
 ## Screenshots
 
-> _Run `npm run dev`, interact with the app, and add screenshots to `/screenshots`._
 
 | Empty state | Form with nested questions | Submit preview |
 |---|---|---|
-| ![empty](public/screenshots/empty.png) | ![form](public/screenshots/form.png) |  |
+| ![empty](public/screenshots/empty.png) | ![form](public/screenshots/form.png) | ![submit](public/screenshots/submit.png) |
 
 ---
 
