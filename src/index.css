@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap');
+
+/* ── CSS Custom Properties ── */
+:root {
+  /* Core palette */
+  --color-bg:              #0f1117;
+  --color-surface:         #161b27;
+  --color-surface-raised:  #1c2133;
+  --color-surface-hover:   #222840;
+  --color-header-bg:       rgba(15, 17, 23, 0.85);
+
+  /* Borders */
+  --color-border:          rgba(255, 255, 255, 0.07);
+  --color-border-subtle:   rgba(255, 255, 255, 0.04);
+  --color-border-hover:    rgba(255, 255, 255, 0.13);
+  --color-border-strong:   rgba(255, 255, 255, 0.12);
+
+  /* Text */
+  --color-text-primary:    #e8eaf0;
+  --color-text-secondary:  #a8b0c8;
+  --color-text-muted:      #626880;
+  --color-text-placeholder:#4a5068;
+
+  /* Accent — electric indigo */
+  --color-accent:          #6366f1;
+  --color-accent-hover:    #7c7ff3;
+  --color-accent-subtle:   rgba(99, 102, 241, 0.1);
+  --color-accent-border:   rgba(99, 102, 241, 0.3);
+  --color-accent-ring:     rgba(99, 102, 241, 0.18);
+  --color-accent-glow:     rgba(99, 102, 241, 0.35);
+
+  /* Nesting depth colors */
+  --color-level-1:         #6366f1;  /* indigo */
+  --color-level-2:         #8b5cf6;  /* violet */
+  --color-level-3:         #ec4899;  /* pink */
+  --color-level-4:         #f59e0b;  /* amber */
+
+  --color-level-1-subtle:  rgba(99, 102, 241, 0.12);
+  --color-level-2-subtle:  rgba(139, 92, 246, 0.12);
+  --color-level-3-subtle:  rgba(236, 72, 153, 0.12);
+
+  /* Input */
+  --color-input-bg:        rgba(255, 255, 255, 0.04);
+  --color-input-border:    rgba(255, 255, 255, 0.09);
+
+  /* Danger */
+  --color-danger:          #f87171;
+  --color-danger-subtle:   rgba(248, 113, 113, 0.08);
+  --color-danger-border:   rgba(248, 113, 113, 0.25);
+
+  /* Fonts */
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-mono:    ui-monospace, 'Cascadia Code', Consolas, monospace;
+}
+
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100svh;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+select option {
+  background: var(--color-surface-raised);
+  color: var(--color-text-primary);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ── Focus visible ── */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
